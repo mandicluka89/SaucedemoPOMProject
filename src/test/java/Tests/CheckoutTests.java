@@ -49,8 +49,21 @@ public class CheckoutTests extends BaseTest {
         cartPage.clickOnCheckoutButton();
 
     }
-
     @Test (priority = 1)
+    public void userCanCancelFromCheckoutFirstPageAndGetBackOnCartPage(){
+        int CountBeforeContinue = cartPage.countingCart();
+        checkoutStepOnePage.clickOnCancelButton();
+
+        String expectedUrl = "https://www.saucedemo.com/cart.html";
+        String actualUrl = driver.getCurrentUrl();
+
+        Assert.assertEquals(actualUrl,expectedUrl);
+
+        int CountAfterCancel = cartPage.countingCart();
+        Assert.assertEquals(CountBeforeContinue,CountAfterCancel);
+    }
+
+    @Test (priority = 2)
     public void userCanProceedToCheckoutSecondStepWithValidCredentialsTest(){
 
         String validFirstname = excelReader.getStringData("CheckOut",1,1);
@@ -74,7 +87,7 @@ public class CheckoutTests extends BaseTest {
         Assert.assertEquals(actualSummaryOfPrice,expectedSummaryOfPrice);
 
     }
-    @Test (priority = 2)
+    @Test (priority = 3)
     public void userCanNotProceedToCheckoutSecondStepWithoutFirstNameTest(){
 
         String emptyFirstname = excelReader.getStringData("CheckOut",4,1);
@@ -99,7 +112,7 @@ public class CheckoutTests extends BaseTest {
 
     }
 
-    @Test (priority = 3)
+    @Test (priority = 4)
     public void UserCanNotProceedToCheckoutSecondStepWithoutLastNameTest(){
 
         String validFirstname = excelReader.getStringData("CheckOut",3,1);
@@ -124,7 +137,7 @@ public class CheckoutTests extends BaseTest {
 
     }
 
-    @Test (priority = 4)
+    @Test (priority = 5)
     public void userCanNotProceedToCheckoutSecondStepWithoutPostalCodeTest(){
 
         String validFirstname = excelReader.getStringData("CheckOut",2,1);
@@ -149,7 +162,7 @@ public class CheckoutTests extends BaseTest {
 
     }
 
-    @Test (priority = 5)
+    @Test (priority = 6)
     public void userCanNotProceedToCheckoutSecondStepWithEmptyCredentialsTest(){
 
         String emptyFirstname = excelReader.getStringData("CheckOut",5,1);
@@ -170,7 +183,7 @@ public class CheckoutTests extends BaseTest {
         Assert.assertEquals(actualUrl,expectedUrl);
 
     }
-    @Test (priority = 6)
+    @Test (priority = 7)
     public void userCanCancelFromCheckoutTwoPageAndContinueShoppingTest(){
 
         String validFirstname = excelReader.getStringData("CheckOut",1,1);
@@ -194,7 +207,7 @@ public class CheckoutTests extends BaseTest {
         Assert.assertEquals(ActualCount,AfterCancelCount);
     }
 
-    @Test (priority = 7)
+    @Test (priority = 8)
     public void UserCanFinishCheckoutClickingOnFinishButtonTest(){
 
         String validFirstname = excelReader.getStringData("CheckOut",1,1);
