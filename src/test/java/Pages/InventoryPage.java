@@ -34,13 +34,13 @@ public class InventoryPage extends BaseTest{
     @FindBy(css = ".product_sort_container")
     public WebElement sortDropdown;
 
-    @FindBy(xpath = "//*[@id=\"page_wrapper\"]/footer/ul/li[1]/a")
+    @FindBy(css = ".social_twitter")
     public WebElement twitterButton;
 
-    @FindBy(xpath = "//*[@id=\"page_wrapper\"]/footer/ul/li[2]/a")
+    @FindBy(css = ".social_facebook")
     public WebElement facebookButton;
 
-    @FindBy(xpath = "/html/body/div/div/footer/ul/li[3]/a")
+    @FindBy(css = ".social_linkedin")
     public WebElement linkedInButton;
 
     //------------- List Items Names -------------
@@ -143,7 +143,7 @@ public class InventoryPage extends BaseTest{
         return itemsPrices;
     }
 
-    //----- List of String Items Prices From Low To High  -----
+    //----- List of Double Items Prices From Low To High  -----
 
     public boolean isAscendingPrices(List<Double>itemsPrices){
         List<Double> ascendingList = new ArrayList<>(itemsPrices);
@@ -151,7 +151,7 @@ public class InventoryPage extends BaseTest{
         return itemsPrices.equals(ascendingList);
     }
 
-    //----- List of String Items Prices From High To Low  -----
+    //----- List of Double Items Prices From High To Low  -----
 
     public boolean isDescendingPrices(List<Double>itemsPrices){
         List<Double> descendingList = new ArrayList<>(itemsPrices);
@@ -169,6 +169,12 @@ public class InventoryPage extends BaseTest{
         twitterButton.click();
     }
 
+    public void clickOnFacebookButton(){
+        facebookButton.click();
+    }
 
+    public void clickOnLinkedInbutton(){
+        linkedInButton.click();
+    }
 }
 

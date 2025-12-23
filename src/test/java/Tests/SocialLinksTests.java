@@ -41,7 +41,7 @@ public class SocialLinksTests extends BaseTest {
     @Test
     public void userCanNavigateToTwitterClickingOnTwitterButtonTest() throws InterruptedException {
 
-        inventoryPage.twitterButton.click();
+        inventoryPage.clickOnTwitterButton();
         Thread.sleep(1000);
 
         ArrayList<String> listaTabova = new ArrayList<>(driver.getWindowHandles());
@@ -56,7 +56,7 @@ public class SocialLinksTests extends BaseTest {
     @Test
     public void userCanNavigateToFacebookClickingOnFacebookButtonTest() throws InterruptedException {
 
-        inventoryPage.facebookButton.click();
+        inventoryPage.clickOnFacebookButton();
         Thread.sleep(1000);
 
         ArrayList<String> listaTabova = new ArrayList<>(driver.getWindowHandles());
@@ -71,7 +71,7 @@ public class SocialLinksTests extends BaseTest {
     @Test
     public void userCanNavigateToLinkedInClickOnLinkedInButtonTest() throws InterruptedException {
 
-        inventoryPage.linkedInButton.click();
+        inventoryPage.clickOnLinkedInbutton();
         Thread.sleep(1000);
 
         ArrayList<String> listaTabova = new ArrayList<>(driver.getWindowHandles());

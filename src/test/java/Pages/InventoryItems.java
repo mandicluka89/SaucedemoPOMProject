@@ -33,10 +33,10 @@ public class InventoryItems extends BaseTest{
     @FindBy(id = "item_0_img_link")
     public WebElement bikeLightImageLink;
 
-    @FindBy (xpath = "//*[@id=\"inventory_container\"]/div/div[2]/div[2]/div[1]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_0_title_link) .inventory_item_desc")
     public WebElement bikeLightDescription;
 
-    @FindBy(xpath = "//*[@id=\"inventory_container\"]/div/div[2]/div[2]/div[2]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_0_title_link) .inventory_item_price")
     public WebElement bikeLightPrice;
 
     //----------- Item 1 ---------------
@@ -50,10 +50,10 @@ public class InventoryItems extends BaseTest{
     @FindBy(id = "item_1_img_link")
     public WebElement tShirtImageLink;
 
-    @FindBy (xpath = "//*[@id=\"inventory_container\"]/div/div[3]/div[2]/div[1]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_1_title_link) .inventory_item_desc")
     public WebElement tShirtDescription;
 
-    @FindBy(xpath = "//*[@id=\"inventory_container\"]/div/div[3]/div[2]/div[2]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_1_title_link) .inventory_item_price")
     public WebElement tShirtPrice;
 
     //----------- Item 2 ---------------
@@ -67,10 +67,10 @@ public class InventoryItems extends BaseTest{
     @FindBy(id = "item_2_img_link")
     public WebElement onesieImageLink;
 
-    @FindBy (xpath = "//*[@id=\"inventory_container\"]/div/div[5]/div[2]/div[1]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_2_title_link) .inventory_item_desc")
     public WebElement onesieDescription;
 
-    @FindBy(xpath = "//*[@id=\"inventory_container\"]/div/div[5]/div[2]/div[2]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_2_title_link) .inventory_item_price")
     public WebElement onesiePrice;
 
 //----------- Item 3 ---------------
@@ -84,10 +84,10 @@ public class InventoryItems extends BaseTest{
     @FindBy(id = "item_3_img_link")
     public WebElement redTShirtImageLink;
 
-    @FindBy (xpath = "//*[@id=\"inventory_container\"]/div/div[6]/div[2]/div[1]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_3_title_link) .inventory_item_desc")
     public WebElement redTShirtDescription;
 
-    @FindBy(xpath = "//*[@id=\"inventory_container\"]/div/div[6]/div[2]/div[2]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_3_title_link) .inventory_item_price")
     public WebElement redTShirtPrice;
 
 //----------- Item 4 ---------------
@@ -101,10 +101,10 @@ public class InventoryItems extends BaseTest{
     @FindBy(id = "item_4_img_link")
     public WebElement backpackImageLink;
 
-    @FindBy (xpath = "//*[@id=\"inventory_container\"]/div/div[1]/div[2]/div[1]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_4_title_link) .inventory_item_desc")
     public WebElement backpackDescription;
 
-    @FindBy(xpath = "//*[@id=\"inventory_container\"]/div/div[1]/div[2]/div[2]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_4_title_link) .inventory_item_price")
     public WebElement backpackPrice;
 
     //---------------- Item 5 ----------------
@@ -118,10 +118,10 @@ public class InventoryItems extends BaseTest{
     @FindBy(id = "item_5_img_link")
     public WebElement fleeceJacketImageLink;
 
-    @FindBy (xpath = "//*[@id=\"inventory_container\"]/div/div[4]/div[2]/div[1]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_5_title_link) .inventory_item_desc")
     public WebElement fleeceJacketDescription;
 
-    @FindBy(xpath = "//*[@id=\"inventory_container\"]/div/div[4]/div[2]/div[2]/div")
+    @FindBy(css = ".inventory_item_description:has(#item_5_title_link) .inventory_item_price")
     public WebElement fleeceJacketPrice;
 
 
